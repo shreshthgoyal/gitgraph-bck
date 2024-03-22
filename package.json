@@ -1,0 +1,20 @@
+{
+  "name": "tsp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "node-fetch": "^3.3.2",
+    "tree-sitter": "^0.21.0",
+    "tree-sitter-python": "^0.21.0"
+  }
+}
