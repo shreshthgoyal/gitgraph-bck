@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const main = require('./data'); 
+const Data = require('./data.js'); 
 const port = 3000;
 
 const app = express();
@@ -12,8 +12,9 @@ app.get('/fetch-data', async (req, res) => {
     const userInput = req.query.userInput; 
   if (userInput !== undefined && userInput !== "") {
     try {
-    const data = await main(userInput); 
-    res.json({nodes: data.nodes, links: data.links});
+    const data = new Data();
+    const result = await data.main(userInput); 
+    res.json(result);
     } catch (error) {
         res.status(500).json({ error: "Error fetching data" });
     }
